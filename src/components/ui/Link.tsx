@@ -1,32 +1,35 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { cva, VariantProps } from 'class-variance-authority';
 
-interface LinkProps {
-    children: React.ReactNode;
-    href?: string;
-    color?: 'accent' | 'secondary';
-    onClick?: () => void;
-}
+interface LinkProps
+    extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
+        VariantProps<typeof link> {}
 
-const LinkStyles = {
-    accent: 'hover:text-accent',
-    secondary: 'hover:text-secondary',
-};
+const link = cva('text-gray-300 transition-colors duration-500 ease-out', {
+    variants: {
+        variant: {
+            secondary: 'hover:text-secondary',
+            accent: 'hover:text-accent',
+        },
+    },
+    defaultVariants: {
+        variant: 'secondary',
+    },
+});
 
-const Link: React.FC<LinkProps> = ({
-    children,
-    href = '#',
-    onClick,
-    color = 'secondary',
-}) => {
-    return (
-        <a
-            className={`${LinkStyles[color]} text-gray-300 transition-colors duration-500 ease-out`}
-            href={href}
-            onClick={onClick}
-        >
-            {children}
-        </a>
-    );
-};
+const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
+    ({ className, variant, ...props }, ref) => {
+        return (
+            <a
+                ref={ref}
+                className={link({ variant, className })}
+                {...props}
+            ></a>
+        );
+    }
+);
+
+export const MotionLink = motion(Link);
 
 export default Link;
