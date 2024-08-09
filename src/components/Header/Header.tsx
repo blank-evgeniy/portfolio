@@ -29,7 +29,7 @@ const Header = () => {
     };
 
     return (
-        <header className="fixed z-30 w-screen bg-main font-main text-2xl text-white shadow-xl">
+        <header className="fixed z-30 w-screen bg-main font-main text-2xl text-white shadow-sm shadow-main">
             <nav className="mx-auto max-w-[1360px] px-4">
                 <motion.div
                     variants={headerAnimations}
