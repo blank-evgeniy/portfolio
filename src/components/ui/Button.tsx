@@ -17,6 +17,9 @@ const button = cva(
             variant: {
                 secondary: 'hover:border-secondary hover:bg-secondary',
                 accent: 'hover:border-accent hover:bg-accent',
+                secondary_dark:
+                    'hover:border-secondary hover:bg-secondary border-main',
+                accent_dark: 'hover:border-accent hover:bg-accent border-main',
             },
         },
 
