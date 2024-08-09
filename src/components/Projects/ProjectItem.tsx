@@ -78,18 +78,20 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectData, num }) => {
                     }
                 >
                     <Reveal>
-                        <img
-                            className={
-                                orientation === 'mobile'
-                                    ? 'mx-auto h-[50vh] shadow-md shadow-black brightness-75'
-                                    : 'h-[50vh] object-contain shadow-md shadow-black brightness-75'
-                            }
-                            src={
-                                orientation === 'laptop'
-                                    ? `./projects/${projectData.laptopImg}`
-                                    : `./projects/${projectData.mobileImg}`
-                            }
-                        />
+                        <div className="relative h-[50vh]">
+                            <img
+                                className={
+                                    orientation === 'mobile'
+                                        ? 'mx-auto max-h-[50vh] shadow-md shadow-black brightness-75'
+                                        : 'absolute left-[50%] top-[50%] max-h-[50vh] -translate-x-1/2 -translate-y-1/2 shadow-md shadow-black brightness-75'
+                                }
+                                src={
+                                    orientation === 'laptop'
+                                        ? `./projects/${projectData.laptopImg}`
+                                        : `./projects/${projectData.mobileImg}`
+                                }
+                            />
+                        </div>
                     </Reveal>
                     <Reveal>
                         <div className="flex justify-center gap-4">
