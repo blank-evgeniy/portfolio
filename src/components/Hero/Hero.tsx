@@ -1,7 +1,5 @@
 import { GithubIcon, TelegramIcon } from '../img/Icons';
-import { MotionButton } from '../ui/Button';
-import Header from '../Header/Header';
-import Link from '../ui/Link';
+import Link, { MotionLink } from '../ui/Link';
 import { motion } from 'framer-motion';
 
 const heroAnimation = {
@@ -29,7 +27,6 @@ const linksAnimation = {
 const Hero = () => {
     return (
         <div className="relative min-h-screen overflow-hidden bg-main">
-            <Header />
             <section className="text-white">
                 <motion.div
                     initial="hidden"
@@ -50,9 +47,14 @@ const Hero = () => {
                     >
                         frontend react developer
                     </motion.h1>
-                    <MotionButton variants={heroAnimation} custom={3}>
+                    <MotionLink
+                        variants={heroAnimation}
+                        custom={3}
+                        variant="button"
+                        href="#about"
+                    >
                         Обо мне
-                    </MotionButton>
+                    </MotionLink>
                 </motion.div>
                 <motion.div
                     variants={linksAnimation}
@@ -61,17 +63,17 @@ const Hero = () => {
                     className="absolute bottom-8 left-[50%] flex translate-x-[-50%] gap-4"
                 >
                     <Link href="" variant="accent">
-                        <GithubIcon />
+                        <GithubIcon size={48} />
                     </Link>
                     <Link href="" variant="accent">
-                        <TelegramIcon />
+                        <TelegramIcon size={48} />
                     </Link>
                 </motion.div>
 
-                <div className="pointer-events-none absolute left-12 top-12 select-none text-nowrap text-9xl opacity-10">
+                <div className="pointer-events-none absolute left-12 top-16 select-none text-nowrap text-8xl opacity-10 sm:text-9xl">
                     {'<web />'}
                 </div>
-                <div className="pointer-events-none absolute bottom-12 right-12 select-none text-nowrap text-9xl opacity-10">
+                <div className="pointer-events-none absolute bottom-12 right-12 select-none text-nowrap text-8xl opacity-10 sm:text-9xl">
                     {'<dev />'}
                 </div>
             </section>
