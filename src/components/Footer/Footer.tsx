@@ -4,7 +4,7 @@ import Reveal from '../ui/Reveal';
 
 const Footer = () => {
     return (
-        <footer className="bg-secondary" id="contacts">
+        <footer className="overflow-hidden bg-secondary px-2" id="contacts">
             <div className="mx-auto max-w-[1200px] py-8">
                 <Reveal>
                     <div className="flex justify-center gap-4 pb-8 pt-12 text-xl uppercase">
@@ -20,8 +20,8 @@ const Footer = () => {
                     </div>
                 </Reveal>
                 <hr className="text-white" />
-                <div className="flex flex-wrap justify-center gap-4 pt-16 text-xl">
-                    <Reveal>
+                <Reveal>
+                    <div className="flex flex-wrap justify-center gap-4 pt-16 text-xl">
                         <Link
                             variant={'buttonAccent'}
                             href="mailto:blank.eugeny@yandex.ru"
@@ -30,8 +30,6 @@ const Footer = () => {
                                 blank.eugeny@yandex.ru <EmailIcon />
                             </div>
                         </Link>
-                    </Reveal>
-                    <Reveal>
                         <Link
                             variant={'buttonAccent'}
                             href="https://t.me/blankeee"
@@ -41,8 +39,6 @@ const Footer = () => {
                                 Telegram <TelegramIcon />
                             </div>
                         </Link>
-                    </Reveal>
-                    <Reveal>
                         <Link
                             variant={'buttonAccent'}
                             href="https://github.com/blank-evgeniy"
@@ -52,8 +48,8 @@ const Footer = () => {
                                 GitHub <GithubIcon />
                             </div>
                         </Link>
-                    </Reveal>
-                </div>
+                    </div>
+                </Reveal>
             </div>
         </footer>
     );

@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from '../ui/Link';
 import { CloseIcon, MenuIcon } from '../img/Icons';
 import { motion } from 'framer-motion';
 
 const MobileMenuStyles = {
-    open: 'absolute left-0 top-0 z-30 flex h-screen w-screen flex-col gap-4 bg-secondary p-8 transition-transform duration-500 ease-out sm:hidden translate-x-0',
-    close: 'absolute left-0 top-0 z-30 flex h-screen w-screen flex-col gap-4 bg-secondary p-8 transition-transform duration-500 ease-out sm:hidden translate-x-full',
+    open: 'absolute left-0 top-0 z-30 flex h-[200vh] overflow-hidden w-screen flex-col gap-4 bg-secondary p-8 transition-transform duration-500 ease-out sm:hidden translate-x-0',
+    close: 'absolute left-0 top-0 z-30 flex h-[200vh] overflow-hidden w-screen flex-col gap-4 bg-secondary p-8 transition-transform duration-500 ease-out sm:hidden translate-x-full',
 };
 
 const headerAnimations = {
@@ -27,6 +27,13 @@ const Header = () => {
     const handleOpen = () => {
         setIsOpen((prev) => !prev);
     };
+
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? 'hidden' : 'scroll';
+        return () => {
+            document.body.style.overflow = 'scroll';
+        };
+    }, [isOpen]);
 
     return (
         <header className="fixed z-30 w-screen bg-main font-main text-2xl text-white shadow-sm shadow-main">
