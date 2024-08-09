@@ -81,7 +81,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectData, num }) => {
                         <img
                             className={
                                 orientation === 'mobile'
-                                    ? 'mx-auto h-[50vh] shadow-lg shadow-md shadow-black brightness-75'
+                                    ? 'mx-auto h-[50vh] shadow-md shadow-black brightness-75'
                                     : 'h-[50vh] object-contain shadow-md shadow-black brightness-75'
                             }
                             src={
