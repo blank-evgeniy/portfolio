@@ -5,6 +5,7 @@ export default {
         extend: {
             fontFamily: {
                 main: ['Advent Pro', 'sans-serif'],
+                chakra: ['Chakra Petch', 'sans-serif'],
             },
             colors: {
                 main: '#0a0a0a',

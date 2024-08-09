@@ -6,14 +6,14 @@ interface LinkProps
     extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
         VariantProps<typeof link> {}
 
-const link = cva('text-gray-300 transition-colors duration-500 ease-out', {
+const link = cva('transition-colors duration-500 ease-out', {
     variants: {
         variant: {
-            secondary: 'hover:text-secondary',
-            accent: 'hover:text-accent',
-            button: 'rounded-sm border px-8 py-3 text-lg hover:border-secondary hover:bg-secondary font-semibold',
+            secondary: 'hover:text-secondary text-gray-300',
+            accent: 'hover:text-accent text-gray-300',
+            button: 'rounded-sm border px-8 py-3 text-white text-lg hover:border-secondary hover:bg-secondary font-semibold',
             buttonAccent:
-                'rounded-sm border px-8 py-3 text-lg hover:border-accent hover:bg-accent hover:text-black font-semibold',
+                'rounded-sm border px-8 py-3 text-white text-lg hover:border-accent hover:bg-accent hover:text-black font-semibold',
         },
     },
     defaultVariants: {

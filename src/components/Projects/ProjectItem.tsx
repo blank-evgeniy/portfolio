@@ -37,12 +37,14 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectData, num }) => {
             <div className={'mx-auto flex max-w-[1360px] flex-wrap px-4'}>
                 <div className="w-full text-white lg:w-1/3">
                     <Reveal>
-                        <h3 className="text-5xl font-semibold">
+                        <h3 className="font-chakra text-5xl font-semibold">
                             {projectData.title}
                         </h3>
                     </Reveal>
                     <Reveal>
-                        <p className="my-6">{projectData.description}</p>
+                        <p className="my-6 text-lg">
+                            {projectData.description}
+                        </p>
                     </Reveal>
                     <Reveal>
                         <h4 className="text-2xl font-semibold">
@@ -53,7 +55,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectData, num }) => {
                     <Reveal>
                         <ul className="m-6 list-inside list-disc">
                             {projectData.devTools.map((item) => (
-                                <li className="text-lg" key={item}>
+                                <li className="font-chakra text-lg" key={item}>
                                     {item}
                                 </li>
                             ))}
@@ -117,7 +119,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectData, num }) => {
                     </Reveal>
                     <div
                         className={
-                            'pointer-events-none absolute right-0 top-2 font-mono text-7xl text-white sm:text-9xl lg:-top-4'
+                            'font-chakra pointer-events-none absolute right-0 top-2 text-7xl text-white sm:text-9xl lg:-top-4'
                         }
                     >
                         {Numbers[num]}

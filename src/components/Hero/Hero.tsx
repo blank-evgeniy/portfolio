@@ -43,7 +43,7 @@ const Hero = () => {
                     <motion.h1
                         variants={heroAnimation}
                         custom={2}
-                        className="mb-8 mt-4 text-2xl text-accent"
+                        className="font-chakra mb-8 mt-4 text-2xl text-accent"
                     >
                         frontend react developer
                     </motion.h1>
@@ -62,18 +62,26 @@ const Hero = () => {
                     animate="visible"
                     className="absolute bottom-8 left-[50%] flex translate-x-[-50%] gap-4"
                 >
-                    <Link href="" variant="accent">
+                    <Link
+                        href="https://github.com/blank-evgeniy"
+                        variant="accent"
+                        target="_blank"
+                    >
                         <GithubIcon size={48} />
                     </Link>
-                    <Link href="" variant="accent">
+                    <Link
+                        href="https://t.me/blankeee"
+                        variant="accent"
+                        target="_blank"
+                    >
                         <TelegramIcon size={48} />
                     </Link>
                 </motion.div>
 
-                <div className="pointer-events-none absolute left-12 top-16 select-none text-nowrap text-8xl opacity-10 sm:text-9xl">
+                <div className="font-chakra pointer-events-none absolute left-12 top-16 select-none text-nowrap text-8xl opacity-10 sm:text-9xl">
                     {'<web />'}
                 </div>
-                <div className="pointer-events-none absolute bottom-12 right-12 select-none text-nowrap text-8xl opacity-10 sm:text-9xl">
+                <div className="font-chakra pointer-events-none absolute bottom-12 right-12 select-none text-nowrap text-8xl opacity-10 sm:text-9xl">
                     {'<dev />'}
                 </div>
             </section>

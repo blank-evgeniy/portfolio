@@ -37,6 +37,9 @@ const Header = () => {
                     animate="visible"
                     className="hidden justify-end gap-12 py-6 pr-12 align-middle sm:flex"
                 >
+                    <Link className="font-chakra mr-auto" href="#">
+                        blanke
+                    </Link>
                     <Link href="#about">Обо мне</Link>
                     <Link href="#projects">Проекты</Link>
                     <Link href="#skills">Навыки</Link>

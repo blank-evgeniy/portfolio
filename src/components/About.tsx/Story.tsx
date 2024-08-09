@@ -9,7 +9,7 @@ const Story = () => {
             </Reveal>
             <Reveal>
                 <hr className="mb-8 mt-16 h-1 scale-x-50 bg-secondary" />
-                <p className="text-xl">
+                <p className="text-2xl">
                     Привет! Меня зовут Бланк Евгений. Я программист из
                     Калининграда, специализирующийся на{' '}
                     <Strong>frontend-разработке</Strong>. Я увлекаюсь
@@ -20,7 +20,7 @@ const Story = () => {
             </Reveal>
 
             <Reveal>
-                <p className="pt-8 text-xl">
+                <p className="pt-8 text-2xl">
                     На данный момент я студент последнего курса в техническом
                     университете на специальности{' '}
                     <Strong>"Прикладная информатика"</Strong>. Параллельно с
@@ -32,7 +32,7 @@ const Story = () => {
             </Reveal>
 
             <Reveal>
-                <p className="pt-8 text-xl">
+                <p className="pt-8 text-2xl">
                     Сейчас моя <Strong>гланая цель</Strong> - это найти работу в
                     уютной компании, где я смог бы набраться опыта и быстрее
                     развиваться как программист.
@@ -40,7 +40,7 @@ const Story = () => {
             </Reveal>
 
             <Reveal>
-                <p className="pt-8 text-xl">
+                <p className="pt-8 text-2xl">
                     Чтобы узнать меня получше - предлагаю ознакомиться с моими{' '}
                     <Strong>работами</Strong>, среди которых как PET-проекты,
                     так и сайт на заказ.
