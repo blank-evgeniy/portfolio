@@ -29,9 +29,9 @@ const Header = () => {
     };
 
     useEffect(() => {
-        document.body.style.overflow = isOpen ? 'hidden' : 'scroll';
+        document.body.style.overflowY = isOpen ? 'hidden' : 'scroll';
         return () => {
-            document.body.style.overflow = 'scroll';
+            document.body.style.overflowY = 'scroll';
         };
     }, [isOpen]);
 
@@ -44,7 +44,7 @@ const Header = () => {
                     animate="visible"
                     className="hidden justify-end gap-12 py-6 pr-12 align-middle sm:flex"
                 >
-                    <Link className="font-chakra mr-auto" href="#">
+                    <Link className="mr-auto font-chakra" href="#">
                         blanke
                     </Link>
                     <Link href="#about">Обо мне</Link>
