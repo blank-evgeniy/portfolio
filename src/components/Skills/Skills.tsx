@@ -14,17 +14,14 @@ import Reveal from '../ui/Reveal';
 
 const Skills = () => {
     return (
-        <section
-            className="relative min-h-screen overflow-hidden bg-main"
-            id="skills"
-        >
+        <section className="relative overflow-hidden bg-main" id="skills">
             <div className="mx-auto max-w-[1360px] px-4 py-20">
                 <Reveal>
                     <h2 className="text-5xl font-semibold text-white">
                         Мои навыки.
                     </h2>
                 </Reveal>
-                <div className="font-chakra mt-20 items-center justify-center gap-4 text-white sm:grid sm:grid-cols-3 md:mt-32 md:grid-cols-4 xl:grid-cols-5">
+                <div className="mt-20 items-center justify-center gap-4 font-chakra text-white sm:grid sm:grid-cols-3 md:mt-32 md:grid-cols-4 xl:grid-cols-5">
                     <Reveal>
                         <Badge className="hover:border-orange-600 hover:text-orange-600">
                             HTML5 <HtmlIcon size={48} />
@@ -105,7 +102,7 @@ const Skills = () => {
                 </div>
             </div>
 
-            <div className="font-chakra pointer-events-none absolute right-12 top-12 select-none text-nowrap text-8xl text-white opacity-10 sm:text-9xl">
+            <div className="pointer-events-none absolute right-12 top-12 select-none text-nowrap font-chakra text-8xl text-white opacity-10 sm:text-9xl">
                 {'<skills />'}
             </div>
         </section>

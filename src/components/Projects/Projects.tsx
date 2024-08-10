@@ -2,10 +2,9 @@ import ProjectsData from '../../data/projects.json';
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
-    console.log(ProjectsData);
     return (
         <section
-            className="relative min-h-screen overflow-hidden bg-slate-200"
+            className="relative overflow-hidden bg-slate-200"
             id="projects"
         >
             <div className="mx-auto max-w-[1360px] px-4 pb-8 pt-20">

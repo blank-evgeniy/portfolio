@@ -119,7 +119,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectData, num }) => {
                     </Reveal>
                     <div
                         className={
-                            'font-chakra pointer-events-none absolute right-0 top-2 text-7xl text-white sm:text-9xl lg:-top-4'
+                            'pointer-events-none absolute right-0 top-2 font-chakra text-7xl text-white sm:text-9xl lg:-top-4'
                         }
                     >
                         {Numbers[num]}
