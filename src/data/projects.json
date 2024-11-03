@@ -1,5 +1,20 @@
 [
     {
+        "title": "Tasty Creations",
+        "description": "Сайт с рецептами различных блюд разработанный на Next.js и Express.js. На данном проекте реализованы следующие фичи: авторизация по jwt-токену, поиск рецептов по каталогам, добавление рецепта в книгу с дальнейшим сохраненим в MongoDB.",
+        "devTools": [
+            "TypeScript",
+            "Next.js",
+            "React (Tanstack) Query",
+            "React Hook Form",
+            "Express.js",
+            "MongoDB"
+        ],
+        "img": "./tasty_creations.jpg",
+        "link": "https://tasty-creations-coral.vercel.app/",
+        "background": "#b44628"
+    },
+    {
         "title": "Serebro39",
         "description": "Сайт-каталог гель-лака для небольшого магазина знакомой. На сайте есть возможность просмотра, поиска, фильтрации товаров и их добавление в карзину, также предусмотрена административная панель для обновления товаров в базе данных. Построен с помощью React и Google Firebase.",
         "devTools": [
@@ -7,47 +22,18 @@
             "React",
             "React Router",
             "Redux Toolkit",
-            "Hooks",
             "Bootstrap",
             "Firebase"
         ],
-        "laptopImg": "./nail-lap.jpg",
-        "mobileImg": "./nail-mob.jpg",
+        "img": "./nail-polish-store.jpg",
         "link": "https://nail-polish-store.vercel.app/",
         "background": "#0f041e"
-    },
-    {
-        "title": "Re:Zero - Characters",
-        "description": "Небольшой PET-проект, состоящий из трех страниц: превью, список всех персонажей и страница конкретного. Здесь реализован следующий функционал: роутинг, пагинация, поиск и фильтрация.",
-        "devTools": [
-            "TypeScript",
-            "React",
-            "React Router",
-            "Redux Toolkit",
-            "Hooks",
-            "SCSS",
-            "BEM"
-        ],
-        "laptopImg": "./rezero-lap.jpg",
-        "mobileImg": "./rezero-mob.jpg",
-        "link": "https://rezero-react-redux-ts.vercel.app/",
-        "background": "#6f6888"
-    },
-    {
-        "title": "React - Test",
-        "description": "Это мой первый PET-проект на библиотеке React. Он представляет собой тест из 10 вопросов на знание React'а и подведение результатов по его окончании с отображением правильных ответов и ошибок.",
-        "devTools": ["React", "React Router", "Hooks", "Tailwind"],
-        "laptopImg": "./test-lap.jpg",
-        "mobileImg": "./test-mob.jpg",
-        "link": "https://testing-form-react.vercel.app/",
-        "background": "#396"
     },
     {
         "title": "Cafe Ame",
         "description": "Лендинг для выдуманного кафе из Лондона. Это уже мой первый проект в Frontend'e впринцепе. Выполняя его я проверил свои навыки верстки, а также освоил методологию БЭМ.",
         "devTools": ["HTML", "SCSS", "JavaScript", "BEM"],
-        "laptopImg": "./cafe-lap.jpg",
-        "mobileImg": "./cafe-mob.jpg",
+        "img": "./cafe-lap.jpg",
         "link": "https://blank-evgeniy.github.io/cafe_js/",
         "background": "#999"
     }

@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from '../ui/Link';
-import { LaptopIcon, MobileIcon } from '../img/Icons';
 import Reveal from '../ui/Reveal';
 
 export interface ProjectDataType {
     title: string;
     description: string;
     devTools: string[];
-    laptopImg: string;
-    mobileImg: string;
+    img: string;
     link: string;
     background: string;
 }
@@ -18,17 +16,9 @@ interface ProjectItemProps {
     num: number;
 }
 
-type orientationType = 'laptop' | 'mobile';
-
 const Numbers = ['01', '02', '03', '04', '05', '06'];
 
 const ProjectItem: React.FC<ProjectItemProps> = ({ projectData, num }) => {
-    const [orientation, setOrientation] = useState<orientationType>('laptop');
-
-    const handleChangeOrientation = (orientation: orientationType) => {
-        setOrientation(orientation);
-    };
-
     return (
         <div
             className="py-20 lg:py-40"
@@ -82,39 +72,9 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectData, num }) => {
                     <Reveal>
                         <div className="relative h-[50vh]">
                             <img
-                                className={
-                                    orientation === 'mobile'
-                                        ? 'mx-auto max-h-[50vh] shadow-md shadow-black brightness-75'
-                                        : 'absolute left-[50%] top-[50%] max-h-[50vh] -translate-x-1/2 -translate-y-1/2 shadow-md shadow-black brightness-75'
-                                }
-                                src={
-                                    orientation === 'laptop'
-                                        ? `./projects/${projectData.laptopImg}`
-                                        : `./projects/${projectData.mobileImg}`
-                                }
+                                className="absolute left-[50%] top-[50%] max-h-[50vh] -translate-x-1/2 -translate-y-1/2 shadow-md shadow-black brightness-75"
+                                src={`./projects/${projectData.img}`}
                             />
-                        </div>
-                    </Reveal>
-                    <Reveal>
-                        <div className="flex justify-center gap-4">
-                            <button
-                                disabled={orientation === 'laptop'}
-                                onClick={() => {
-                                    handleChangeOrientation('laptop');
-                                }}
-                                className="relative top-6 rounded-md bg-white p-1 shadow-md transition-colors duration-500 ease-out hover:bg-accent disabled:bg-gray-400"
-                            >
-                                <LaptopIcon />
-                            </button>
-                            <button
-                                disabled={orientation === 'mobile'}
-                                onClick={() => {
-                                    handleChangeOrientation('mobile');
-                                }}
-                                className="relative top-6 rounded-md bg-white p-1 shadow-md transition-colors duration-500 ease-out hover:bg-accent disabled:bg-gray-400"
-                            >
-                                <MobileIcon />
-                            </button>
                         </div>
                     </Reveal>
                     <div
