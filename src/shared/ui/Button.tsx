@@ -9,7 +9,7 @@ interface ButtonProps
 const button = cva('rounded-sm border transition-colors duration-500 ease-out', {
   variants: {
     size: {
-      default: 'px-8 py-3 text-lg',
+      sm: 'px-8 py-3 text-lg',
       md: 'px-10 py-4 text-xl',
     },
     variant: {
@@ -21,7 +21,7 @@ const button = cva('rounded-sm border transition-colors duration-500 ease-out', 
   },
 
   defaultVariants: {
-    size: 'default',
+    size: 'sm',
     variant: 'secondary',
   },
 });

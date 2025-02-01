@@ -1,12 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cva, VariantProps } from 'class-variance-authority';
+import { cn } from '../lib/styles/cn';
 
-interface LinkProps
-  extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
-    VariantProps<typeof link> {}
-
-const link = cva('transition-colors duration-500 ease-out', {
+const linkVariants = cva('transition-colors duration-500 ease-out', {
   variants: {
     variant: {
       secondary: 'hover:text-secondary text-gray-300',
@@ -22,9 +19,13 @@ const link = cva('transition-colors duration-500 ease-out', {
   },
 });
 
+interface LinkProps
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
+    VariantProps<typeof linkVariants> {}
+
 const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
   ({ className, variant, ...props }, ref) => {
-    return <a ref={ref} className={link({ variant, className })} {...props}></a>;
+    return <a ref={ref} className={cn(linkVariants({ variant, className }))} {...props}></a>;
   }
 );
 Link.displayName = 'Link';

@@ -1,4 +1,4 @@
-import ProjectsData from '@/data/projects.json';
+import { projectsData } from '@/data/projectsData';
 import ProjectItem from './components/ProjectItem';
 
 export const Projects = () => (
@@ -7,7 +7,7 @@ export const Projects = () => (
       <h2 className='text-5xl font-bold text-main'>Мои проекты.</h2>
       <hr className='mt-2 h-[6px] rounded-lg border-0 bg-main'></hr>
     </div>
-    {ProjectsData.map((data, index) => (
+    {projectsData.map((data, index) => (
       <ProjectItem key={data.title} num={index} projectData={data} />
     ))}
   </section>
