@@ -1,6 +1,7 @@
 import React from 'react';
-import Link from '../ui/Link';
-import Reveal from '../ui/Reveal';
+
+import Link from '@/ui/Link';
+import Reveal from '@/animation/Reveal';
 
 export interface ProjectDataType {
   title: string;

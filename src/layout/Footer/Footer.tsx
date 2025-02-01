@@ -1,12 +1,12 @@
-import Link from '../ui/Link';
-import { EmailIcon, GithubIcon, TelegramIcon } from '../img/Icons';
-import Reveal from '../ui/Reveal';
+import Link from '@/ui/Link';
+import Reveal from '@/animation/Reveal';
+import { EmailIcon, GithubIcon, TelegramIcon } from '@/assets/icons';
 
 const Footer = () => {
   return (
-    <footer className='overflow-hidden bg-secondary px-2' id='contacts'>
-      <div className='mx-auto max-w-[1200px] py-8'>
-        <Reveal>
+    <Reveal>
+      <footer className='overflow-hidden bg-secondary px-2' id='contacts'>
+        <div className='mx-auto max-w-[1200px] py-8'>
           <div className='flex justify-center gap-4 pb-8 pt-12 text-xl uppercase'>
             <Link variant={'accent'} href='#about'>
               обо мне
@@ -18,9 +18,9 @@ const Footer = () => {
               навыки
             </Link>
           </div>
-        </Reveal>
-        <hr className='text-white' />
-        <Reveal>
+
+          <hr className='text-white' />
+
           <div className='flex flex-wrap justify-center gap-4 pt-16 text-xl'>
             <Link variant={'buttonAccent'} href='mailto:blank.eugeny@yandex.ru'>
               <div className='flex gap-4'>
@@ -38,9 +38,9 @@ const Footer = () => {
               </div>
             </Link>
           </div>
-        </Reveal>
-      </div>
-    </footer>
+        </div>
+      </footer>
+    </Reveal>
   );
 };
 

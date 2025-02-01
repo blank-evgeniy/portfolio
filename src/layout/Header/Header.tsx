@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import Link from '../ui/Link';
-import { CloseIcon, MenuIcon } from '../img/Icons';
 import { motion } from 'framer-motion';
+
+import Link from '@/ui/Link';
+import { CloseIcon, MenuIcon } from '@/assets/icons';
 
 const MobileMenuStyles = {
   open: 'absolute left-0 top-0 z-30 flex h-[200vh] overflow-hidden w-screen flex-col gap-4 bg-secondary p-8 transition-transform duration-500 ease-out sm:hidden translate-x-0',
