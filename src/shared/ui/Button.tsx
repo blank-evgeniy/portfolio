@@ -2,11 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { cva, VariantProps } from 'class-variance-authority';
 
-interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof button> {}
+import { cn } from '../lib/styles/cn';
 
-const button = cva('rounded-sm border transition-colors duration-500 ease-out', {
+const buttonVariants = cva('rounded-sm border transition-colors duration-500 ease-out', {
   variants: {
     size: {
       sm: 'px-8 py-3 text-lg',
@@ -26,12 +24,16 @@ const button = cva('rounded-sm border transition-colors duration-500 ease-out', 
   },
 });
 
+interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {}
+
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   { className, size, variant, children, ...props },
   ref
 ) {
   return (
-    <button ref={ref} className={button({ size, variant, className })} {...props}>
+    <button ref={ref} className={cn(buttonVariants({ size, variant, className }))} {...props}>
       {children}
     </button>
   );
