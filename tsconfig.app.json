@@ -21,7 +21,16 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/ui/*": ["src/shared/ui/*"],
+      "@/data/*": ["src/shared/data/*"],
+      "@/animation/*": ["src/shared/animation/*"]
+    }
   },
   "include": ["src"]
 }

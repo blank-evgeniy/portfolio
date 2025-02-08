@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth bg-main font-main;
+  }
+}
+
+/* --------------scrollbar------------------ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cf4131;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8a2c21;
+}
