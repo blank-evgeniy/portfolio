@@ -9,9 +9,7 @@ interface ProjectItemProps {
   num: number;
 }
 
-const Numbers = ['01', '02', '03', '04', '05', '06'];
-
-const ProjectItem: React.FC<ProjectItemProps> = ({ projectData, num }) => {
+const ProjectItem: React.FC<ProjectItemProps> = ({ projectData }) => {
   return (
     <article className='py-20 lg:py-40' style={{ background: projectData.background }}>
       <div className={'mx-auto flex max-w-[1360px] flex-wrap px-4'}>
@@ -44,21 +42,10 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ projectData, num }) => {
         </div>
         <div className={'relative w-full p-1 pt-12 md:pl-12 lg:w-2/3 lg:p-8'}>
           <Reveal>
-            <div className='relative flex h-[50vh] items-center justify-center'>
-              <div className='relative max-h-[50vh] bg-slate-400'>
-                <img
-                  className='pointer-events-none h-full shadow-md brightness-75'
-                  src={projectData.img}
-                />
-                <span
-                  className={
-                    'absolute -right-4 -top-8 font-chakra text-7xl text-white sm:-right-8 sm:-top-12 sm:text-9xl'
-                  }
-                >
-                  {Numbers[num]}
-                </span>
-              </div>
-            </div>
+            <img
+              className='pointer-events-none h-full w-full object-contain shadow-md brightness-75'
+              src={projectData.img}
+            />
           </Reveal>
         </div>
       </div>
