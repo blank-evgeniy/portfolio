@@ -41,7 +41,7 @@ export const Hero = () => (
           custom={2}
           className='mb-8 mt-4 font-chakra text-2xl text-accent'
         >
-          frontend react developer
+          frontend developer
         </motion.h1>
         <MotionLink variants={heroAnimation} custom={3} variant='button' href='#about'>
           Обо мне
