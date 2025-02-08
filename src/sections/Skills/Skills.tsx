@@ -33,7 +33,7 @@ export const Skills = () => (
       </Reveal>
       <Reveal>
         <h3 className='mt-8 text-3xl font-semibold text-slate-200'>Основное</h3>
-        <div className='mt-4 flex gap-x-4 gap-y-2'>
+        <div className='mt-4 grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-x-4 gap-y-6'>
           <SkillBadge title='JavaScript' renderIcon={(w, h) => <JSIcon width={w} height={h} />} />
           <SkillBadge title='TypeScript' renderIcon={(w, h) => <TSIcon width={w} height={h} />} />
           <SkillBadge title='HTML' renderIcon={(w, h) => <HTMLIcon width={w} height={h} />} />
@@ -43,7 +43,7 @@ export const Skills = () => (
       </Reveal>
       <Reveal>
         <h3 className='mt-8 text-3xl font-semibold text-slate-200'>Frontend</h3>
-        <div className='mt-4 flex gap-x-4 gap-y-2'>
+        <div className='mt-4 grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-x-4 gap-y-6'>
           <SkillBadge title='React' renderIcon={(w, h) => <ReactIcon width={w} height={h} />} />
           <SkillBadge title='Next.js' renderIcon={(w, h) => <NextIcon width={w} height={h} />} />
           <SkillBadge title='Redux' renderIcon={(w, h) => <ReduxIcon width={w} height={h} />} />
@@ -61,7 +61,7 @@ export const Skills = () => (
       </Reveal>
       <Reveal>
         <h3 className='mt-8 text-3xl font-semibold text-slate-200'>Backend</h3>
-        <div className='mt-4 flex gap-x-4 gap-y-2'>
+        <div className='mt-4 grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-x-4 gap-y-6'>
           <SkillBadge
             title='Express.js'
             renderIcon={(w, h) => <ExpressIcon width={w} height={h} />}
@@ -83,7 +83,7 @@ export const Skills = () => (
         <h3 className='mt-8 text-3xl font-semibold text-slate-200'>
           Тестирование и анализ качества кода
         </h3>
-        <div className='mt-4 flex gap-x-4 gap-y-2'>
+        <div className='mt-4 grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-x-4 gap-y-6'>
           <SkillBadge title='Jest' renderIcon={(w, h) => <JestIcon width={w} height={h} />} />
           <SkillBadge
             title='StoryBook'
