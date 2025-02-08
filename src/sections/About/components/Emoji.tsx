@@ -32,7 +32,7 @@ const Emoji = () => {
       }}
       whileHover='hover'
       whileTap='tap'
-      className='ml-auto pb-4 hover:cursor-pointer'
+      className='ml-auto object-contain pb-4 hover:cursor-pointer'
       src='./myEmoji.png'
     ></motion.img>
   );

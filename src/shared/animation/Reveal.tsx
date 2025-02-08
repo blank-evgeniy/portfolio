@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const animationVariants = {
+export const animationVariants = {
   hidden: {
     opacity: 0,
     y: 100,

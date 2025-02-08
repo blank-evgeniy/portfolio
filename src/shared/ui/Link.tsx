@@ -9,9 +9,9 @@ const linkVariants = cva('transition-colors duration-500 ease-out', {
       secondary: 'hover:text-secondary text-gray-300',
       accent: 'hover:text-accent text-gray-300',
       button:
-        'rounded-sm border px-8 py-3 text-white text-lg hover:border-secondary hover:bg-secondary font-semibold',
+        'rounded-sm border px-8 py-3 text-white text-lg hover:border-secondary hover:bg-secondary font-semibold inline-flex gap-x-4 items-center justify-center',
       buttonAccent:
-        'rounded-sm border px-8 py-3 text-white text-lg hover:border-accent hover:bg-accent hover:text-black font-semibold',
+        'rounded-sm border px-8 py-3 text-white text-lg hover:border-accent hover:bg-accent hover:text-black font-semibold inline-flex gap-x-4 items-center justify-center',
     },
   },
   defaultVariants: {

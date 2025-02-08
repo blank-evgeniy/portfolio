@@ -68,14 +68,14 @@ const Header = () => {
             Контакты
           </Link>
           <button className='fixed right-8 top-8 z-30 block sm:hidden' onClick={handleOpen}>
-            <CloseIcon />
+            <CloseIcon width={24} height={24} />
           </button>
         </div>
         <button
           className='fixed right-8 top-8 z-20 block rounded-md bg-accent p-1 text-black shadow-lg sm:hidden'
           onClick={handleOpen}
         >
-          <MenuIcon />
+          <MenuIcon width={24} height={24} />
         </button>
       </nav>
     </header>

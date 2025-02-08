@@ -1,44 +1,40 @@
+import { DownArrowIcon } from '@/assets/icons';
 import Reveal from '@/animation/Reveal';
 import Highlight from '@/shared/ui/Highlight';
 
 const Story = () => {
   return (
-    <div className='mx-auto max-w-[1000px] px-4 pt-20'>
+    <div className='max-w-[800px]'>
       <Reveal>
-        <h2 className='text-5xl font-semibold text-main'>Обо мне.</h2>
+        <h2 className='pb-5 text-5xl font-semibold text-main'>Обо мне.</h2>
       </Reveal>
       <Reveal>
-        <hr className='mb-8 mt-16 h-1 scale-x-50 bg-secondary' />
         <p className='text-2xl'>
           Привет! Меня зовут Бланк Евгений. Я программист из Калининграда, специализирующийся на{' '}
-          <Highlight>frontend-разработке</Highlight>. Я увлекаюсь технологиями, спортом, музыкой и
-          многими другими вещами, которые дают мне возможность развиваться и получать от жизни все.
+          <Highlight>web-разработке.</Highlight>
         </p>
       </Reveal>
 
       <Reveal>
         <p className='pt-8 text-2xl'>
-          На данный момент я студент последнего курса в техническом университете на специальности
-          <Highlight> &quot;Прикладная информатика&quot;</Highlight>. Параллельно с обучением в ВУЗе
-          я изучаю веб-разработку. Начиная с базовых уроков по верстке на HTML и CSS, я добрался до
-          экосистемы такой популярной библиотеки как <Highlight>React</Highlight>, в которую
-          углубляюсь по сей день.
+          В настоящее время я учусь на последнем курсе в техническом университете на специальности{' '}
+          <Highlight>Прикладная информатика.</Highlight> Параллельно с этим я также развиваюсь как{' '}
+          <Highlight>frontend</Highlight> и немного <Highlight>backend</Highlight> разработчик.
         </p>
       </Reveal>
 
       <Reveal>
         <p className='pt-8 text-2xl'>
-          Сейчас моя <Highlight>гланая цель</Highlight> - это найти работу в уютной компании, где я
-          смог бы набраться опыта и быстрее развиваться как программист.
+          У меня имеется несколько интересных <Highlight>проектов</Highlight> с реализацией как
+          frontend, так и backend частей web-приложений. Предлагаю вам ознакомиться с ними.
         </p>
-      </Reveal>
 
-      <Reveal>
-        <p className='pt-8 text-2xl'>
-          Чтобы узнать меня получше - предлагаю ознакомиться с моими <Highlight>работами</Highlight>
-          , среди которых как PET-проекты, так и сайт на заказ.
-        </p>
-        <hr className='mt-8 h-1 scale-x-50 bg-secondary' />
+        <a
+          href='#projects'
+          className='mx-auto mt-12 block h-8 w-8 text-secondary transition-colors hover:text-accent'
+        >
+          <DownArrowIcon className='animate-bounce' height={32} width={32} />
+        </a>
       </Reveal>
     </div>
   );
