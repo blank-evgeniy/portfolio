@@ -1,6 +1,7 @@
 import Reveal from '@/animation/Reveal';
 import SkillBadge from './components/SkillBadge';
 import {
+  AstroIcon,
   CSSIcon,
   ESLintIcon,
   ExpressIcon,
@@ -21,7 +22,6 @@ import {
   StoryBookIcon,
   TailwindIcon,
   TSIcon,
-  ViteIcon,
   WebpackIcon,
 } from '@/assets/icons';
 
@@ -46,8 +46,17 @@ export const Skills = () => (
         <div className='mt-4 grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-x-4 gap-y-6'>
           <SkillBadge title='React' renderIcon={(w, h) => <ReactIcon width={w} height={h} />} />
           <SkillBadge title='Next.js' renderIcon={(w, h) => <NextIcon width={w} height={h} />} />
+          <SkillBadge title='Astro' renderIcon={(w, h) => <AstroIcon width={w} height={h} />} />
           <SkillBadge title='Redux' renderIcon={(w, h) => <ReduxIcon width={w} height={h} />} />
-          <SkillBadge title='Vite' renderIcon={(w, h) => <ViteIcon width={w} height={h} />} />
+          <SkillBadge
+            title='Vite'
+            renderIcon={() => (
+              <img
+                className={`h-[48px] w-[48px]`}
+                src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg'
+              />
+            )}
+          />
           <SkillBadge title='Webpack' renderIcon={(w, h) => <WebpackIcon width={w} height={h} />} />
           <SkillBadge
             title='MaterialUI'

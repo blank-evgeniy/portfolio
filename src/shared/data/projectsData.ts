@@ -2,6 +2,16 @@ import { Project } from './types';
 
 export const projectsData: Project[] = [
   {
+    title: 'Lovecraftium',
+    description:
+      'Атмосферный сайт, посвящённый творчеству Говарда Филлипса Лавкрафта, созданный с использованием фреймворка Astro.',
+    devTools: ['TypeScript', 'Astro', 'Astro Island: React', 'TailwindCSS', 'Markdown'],
+    img: './projects/lovecraft.jpg',
+    deployLink: 'https://lovecraft-dusky.vercel.app/',
+    githubLink: 'https://github.com/blank-evgeniy/lovecraft',
+    background: '#45556C',
+  },
+  {
     title: 'Wish Listify',
     description:
       'Веб-приложение, в котором ты можешь составить свой список желаний, добавить друзей и делиться друг с другом идеями для подарков.',
